@@ -33,6 +33,8 @@
 	 $antibiotic = '';
 	 $timepoint = '';
 	 $con = '';
+	 $wellexcluded = '';
+	 $starttime = '';
          ?>
 	<div class="container" >
 	 <form action="mic_upload_process.php" method="post" enctype="multipart/form-data" name="form1" id="form1" onSubmit="return valForm(this);"> 	 
@@ -108,7 +110,7 @@
               </h4>
 			</div>
 		    <div class="col-sm-6">
-              <div style="text-align: left;"><input style="height: 35px; width: 100%;" placeholder="Enter concentration Control Antibiotic used." name="Antibiotic_Name" id="Antibiotic_Name" required type="text" value="<?php echo $antibiotic ?>">
+              <div style="text-align: left;"><input style="height: 35px; width: 100%;" placeholder="Enter Control Antibiotic used." name="Antibiotic_Name" id="Antibiotic_Name" required type="text" value="<?php echo $antibiotic ?>">
               </div>
 			  <br>
 		    </div>
@@ -144,7 +146,7 @@
               </h4>
 			</div>
 		    <div class="col-sm-6">
-              <div style="text-align: left;"><input style="height: 35px; width: 100%;" placeholder="Enter the wells to be excluded.">
+              <div style="text-align: left;"><input style="height: 35px; width: 100%;" placeholder="Enter the wells to be excluded." name="Wells_Excluded" id="Wells_Excluded" required type="text" value="<?php echo $wellexcluded?>">
               </div>
 			  <br>
 		    </div>
@@ -155,7 +157,7 @@
               </h4>
 			</div>
 		    <div class="col-sm-6">
-              <div style="text-align: left;"><input style="height: 35px; width: 100%;" placeholder="Enter the start time of the data.">
+              <div style="text-align: left;"><input style="height: 35px; width: 100%;" placeholder="Enter the start time of the data." name="Start_Time" id="Start_Time" required type="text" value="<?php echo $starttime?>">
               </div>
 			  <br>
 		    </div>

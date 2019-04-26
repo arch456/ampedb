@@ -10,7 +10,7 @@
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 	</head>
 	<body>
-	
+
 	<?php include("top_header_start.php"); include("top_header_logo.php"); include("top_header_menu.php");
 	
 	echo "<div class=\"container\"><div class=\"row\"><div class=\"col-sm-12\"><br/><br/><table>\n\n";
@@ -39,17 +39,17 @@
 	?>
 
 	<?php
-	$Rcommand = "Rscript R-scripts/mic.R $idcode";
-	exec($Rcommand); // execute R script	
-	$micpng = "mic-output/$idcode. "-" . "data.csv";
+	$Rcommand = "Rscript R-scripts/analyzeMassSpec.R $idcode";
+	exec($Rcommand); // execute R script		
+	$mspng = "mic-output/$idcode. "-" . "data.png";
 	echo "&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>";
 	echo "<br/><br/>";
 	echo "\n</table>";
 	echo "<br/>";
 	echo "<br/><br/>";
-	echo '<img src="'.$micpng.'">';
-	?>
+	echo '<img src="'.$mspng.'">';
+?>
 <?php include("footer.php"); ?>
 </body>
 </html>
